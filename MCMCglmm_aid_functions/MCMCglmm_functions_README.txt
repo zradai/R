@@ -29,6 +29,10 @@ Estimates R-squared for an MCMCglmm model, based on the description given by Shi
 
 Gets factor level contrasts, i.e. posterior distribution of factor level differences.
 
+# cutoffs
+
+Three helping functions used by other functions.
+
 # corr.GR
 
 Creates random effects and residual correlation matrices from an MCMCglmm model.
