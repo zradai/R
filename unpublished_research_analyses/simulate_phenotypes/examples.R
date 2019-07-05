@@ -23,7 +23,7 @@ eval.sim(errs, plotting=TRUE, rand.slope=FALSE, averaging=FALSE)
 #################
 
 input.s2<-list(  
-  NI=rep(c(10, 100), 10), # numbers of individuals in the population
+  NI=rep(c(10, 100), 50), # numbers of individuals in the population
   NR=c(3), # numbers of repeated measurements from each individual
   XA=0, # population-average of intercept
   B1=rep(c(0), 1), # population-average slope
