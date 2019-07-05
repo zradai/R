@@ -3,7 +3,10 @@
 #### Aiding functions for MCMCglmm ####
 #######################################
 
-A handful of simple functions to aid handling and interpreting models fitted by MCMCglmm (Hadfield, 2010). Some of the functions are not entirely done yet, so not every kind of models might be used with them (e.g. complex multi-response models, multiple interactions, composite variance structures). Any feedback on the usability and potential errors are very welcome!
+A handful of simple functions to aid handling and interpreting models fitted by MCMCglmm (Hadfield, 2010). 
+Some of the functions are not entirely done yet, so not every kind of models might be used with them 
+(e.g. complex multi-response models, multiple interactions, composite variance structures). 
+Any feedback on the usability and potential errors are very welcome!
 
 In case you use whole or partial codes from this repository, please refer to it!
 
