@@ -28,7 +28,7 @@ Gets factor level contrasts, i.e. posterior distribution of factor level differe
 
 # corr.GR
 
-Creates random effects and residual correlation matrices from an MCMCglmm model. 
+Creates random effects and residual correlation matrices from an MCMCglmm model.
 
 # get.BLUPs
 
