@@ -43,7 +43,7 @@ Simulate phenotypes, based on specifications in the input list:
  - VR # residual variance
  - V.method # method for approximating var-cov matrix in lmer ('statter' or 'kenw')
 
-Each list element can have only one value associated with it. 
+Each list element can have only one value associated with it. In repeated measurement scenarios (NR > 1) X1-values corresponding to separate individuals might be static (i.e. one X1 value over all repeated measures: dyn_X1=FALSE) or changing (dyn_X1=TRUE). For now, in changing X1 resampling of within-individual X1 values is random.
 
 
 
