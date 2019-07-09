@@ -3,9 +3,9 @@ train_NN = function(x, y, tt, actFUN=AF_identity, linkFUN = LF_Gauss, algorithm=
                     aa=0.001, ll=0, n_iter=1000, 
                     logistic_cost=FALSE, verbose=TRUE, R2=FALSE, CrossVal=FALSE, runtime=FALSE){
   
-  ##---- Import activation and link functions! ----
   #source("activation_functions.R")
   #source("link_functions.R")
+  #source("cost_function.R")
   
   if(runtime){run_start = Sys.time()}
   costs = c()
