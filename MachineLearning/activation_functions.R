@@ -1,6 +1,7 @@
 ### Activation functions, with derivative functions as well ###
 
 AF_identity = function(x, theta, deriv=FALSE, simple=TRUE){
+  theta = as.matrix(theta)
   if(!deriv){
     gz = x %*% theta
     return(gz)
@@ -12,6 +13,7 @@ AF_identity = function(x, theta, deriv=FALSE, simple=TRUE){
 }
 
 AF_logistic = function(x, theta, deriv=FALSE, simple=TRUE){
+  theta = as.matrix(theta)
   if(!deriv){
     z = x %*% theta
     gz = 1/(1+exp(-z))
@@ -30,6 +32,7 @@ AF_logistic = function(x, theta, deriv=FALSE, simple=TRUE){
 }
 
 AF_tanh = function(x, theta, deriv=FALSE, simple=TRUE){
+  theta = as.matrix(theta)
   if(!deriv){
     z = x %*% theta
     gz = tanh(z)
@@ -47,6 +50,7 @@ AF_tanh = function(x, theta, deriv=FALSE, simple=TRUE){
 }
 
 AF_relu = function(x, theta, deriv=FALSE, simple=TRUE){
+  theta = as.matrix(theta)
   if(!deriv){
     z = x %*% theta
     z[z<0] = 0
@@ -69,6 +73,7 @@ AF_relu = function(x, theta, deriv=FALSE, simple=TRUE){
 }
 
 AF_softplus = function(x, theta, deriv=FALSE, simple=TRUE){
+  theta = as.matrix(theta)
   if(!deriv){
     z = x %*% theta
     gz = log(1+exp(z))
@@ -85,6 +90,7 @@ AF_softplus = function(x, theta, deriv=FALSE, simple=TRUE){
 }
 
 AF_sinus = function(x, theta, deriv=FALSE, simple=TRUE){
+  theta = as.matrix(theta)
   if(!deriv){
     z = x %*% theta
     gz = sin(z)
@@ -101,6 +107,7 @@ AF_sinus = function(x, theta, deriv=FALSE, simple=TRUE){
 }
 
 AF_gauss = function(x, theta, deriv=FALSE, simple=TRUE){
+  theta = as.matrix(theta)
   if(!deriv){
     z = x %*% theta
     gz = exp(-(z^2))
