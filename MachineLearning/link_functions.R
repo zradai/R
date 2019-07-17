@@ -1,6 +1,7 @@
 ### Link functions ###
 
 LF_Gauss = function(x, theta, mean=TRUE){
+  theta = as.matrix(theta)
   if(mean){
     fx = x %*% theta
   }else{
@@ -10,6 +11,7 @@ LF_Gauss = function(x, theta, mean=TRUE){
 }
 
 LF_gamma = function(x, theta, mean=TRUE){
+  theta = as.matrix(theta)
   if(mean){
     fx = -(x %*% theta)^(-1)
   }else{
@@ -19,6 +21,7 @@ LF_gamma = function(x, theta, mean=TRUE){
 }
 
 LF_invGauss = function(x, theta, mean=TRUE){
+  theta = as.matrix(theta)
   if(mean){
     fx = (x %*% theta)^(-1/2)
   }else{
@@ -28,6 +31,7 @@ LF_invGauss = function(x, theta, mean=TRUE){
 }
 
 LF_pois = function(x, theta, mean=TRUE, logplus=0){
+  theta = as.matrix(theta)
   if(mean){
     fx = exp(x %*% theta)
   }else{
@@ -37,6 +41,7 @@ LF_pois = function(x, theta, mean=TRUE, logplus=0){
 }
 
 LF_binom = function(x, theta, mean=TRUE){
+  theta = as.matrix(theta)
   if(mean){
     fx = 1/(1+exp(-(x %*% theta)))
   }else{
