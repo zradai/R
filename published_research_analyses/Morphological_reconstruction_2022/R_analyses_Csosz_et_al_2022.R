@@ -1,6 +1,8 @@
 
 ###----- loading data -----
 
+# data table is available at figshare: https://doi.org/10.6084/m9.figshare.19596454.v1
+
 # load data frame with morphological (trait) variables
 tt = read.csv("Csosz_et_al_Temnothorax_morpho_data.csv", sep=";")
 
