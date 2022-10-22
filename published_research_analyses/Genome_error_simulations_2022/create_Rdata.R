@@ -40,9 +40,13 @@ for(v in evar.labels$evar){
   asq[,paste(v,"rsc", sep=".")] = rsc(asq[,v])
 }
 
-qvar.labels = read.csv("quality_metrics_labels.csv", sep = ";")
-qvar.labels = qvar.labels[!(qvar.labels$qvar %in% vars.to.omit),]
-qvars = qvar.labels$qvar
+qvar.labels = data.frame(
+  label = c("Total number of contigs","Number of small contigs","Number of large contigs","Size of largest contig (bp)","N50","NG50","L50","LG50",
+            "Total length of all unaligned regions (bp)","Duplication ratio","Number of mismatches per 100 kbp","Number of indels per 100 kbp",
+            "Proportion of aligned regions","GC% bias"),
+  qvar = c("contigs.all","contigs.smallerThan.200bp","contigs.largerThan.200bp","largest.contig","N50","NG50","L50","LG50",
+           "unaligned.length","duplication.ratio","mismatches.per.100.kbp","indels.per.100.kbp","total.aligned.prop","GC.ToRefRatio")
+)
 
 N.nominal = length(unique(asq$cov)) * length(unique(asq$err)) * length(unique(asq$odup)) * length(unique(asq$pdup)) * length(unique(asq$rep))
 
