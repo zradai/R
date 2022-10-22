@@ -1,0 +1,14 @@
+Species;Working ID;Genome size (Mbp);Unique ratio;GC%;NCBI accession code
+Mycoplasma gallisepticum;mgal;0,97;0,890;32,65;NC_018406
+Chlamydia trachomatis;ctram;1,04;0,508;41,78;NC_000117
+Treponema pallidum;tpal;1,14;0,643;52,60;NC_016842
+Corynebacterium pseudotuberculosis;cpse;2,32;0,469;52,93;NC_017301
+Bifidobacterium longum;blon;2,46;0,525;60,84;NZ_CP026999
+Staphylococcus aureus;saur;2,82;0,638;33,78;NC_007795
+Escherichia coli;ecol;5,01;0,618;51,79;NC_000913
+Bacillus thuringiensis;bthu;5,51;0,444;36,23;NZ_CM000747
+Pseudomonas aeruginosa;pae;6,43;0,322;66,96;NC_002516
+Lactococcus lactis;llac;2,45;0,904;36,86;NZ_CP017235
+Clostridium botulinum;cbot;3,95;0,531;29,48;NC_009495
+Bacillus subtilis;bsub;4,10;0,620;44,71;NC_000964
+Mycobacterium tuberculosis;mtub;4,40;0,578;65,86;NC_000962
