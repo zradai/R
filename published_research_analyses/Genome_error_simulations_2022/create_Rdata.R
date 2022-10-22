@@ -1,4 +1,11 @@
 
+###----- LIBRARIES -----
+
+require(stats)
+require(betareg)
+require(emmeans)
+require(metafor)
+
 ###----- FUNCTIONS -----
 
 rsc = function(x, na.rm=T){
