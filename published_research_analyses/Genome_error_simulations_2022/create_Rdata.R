@@ -311,6 +311,31 @@ for(q in qvar.labels$qvar){
 
 #--- multiplicative ---
 
+# model coefficients
+meta.mult.coefs = data.frame(qvar = "", coef = "", estimate = 0, SE = 0, CI.low = 0, CI.up = 0, z = 0, P = 0, tau2 = 0, I2 = 0, H2 = 0, N = 0)[-1,]
+for(q in qvar.labels$qvar){
+  for(e in unique(coefs.mult$coef)){
+    
+    emt.qe = coefs.mult[coefs.mult$qvar==q & coefs.mult$coef==e,]
+    mr.qe = rma(yi = emt.qe$estimate, sei = emt.qe$SE, slab = emt.qe$bact.ID, method = MA.method)
+    mr.ci = confint(mr.qe, level = 0.997, fixed=T, random=F)
+    
+    meta.mult.coefs[nrow(meta.mult.coefs)+1,"qvar"] = q
+    meta.mult.coefs[nrow(meta.mult.coefs),"coef"] = e
+    meta.mult.coefs[nrow(meta.mult.coefs),"estimate"] = mr.qe$beta
+    meta.mult.coefs[nrow(meta.mult.coefs),"SE"] = mr.qe$se
+    meta.mult.coefs[nrow(meta.mult.coefs),"CI.low"] = mr.ci$fixed[1,"ci.lb"]
+    meta.mult.coefs[nrow(meta.mult.coefs),"CI.up"] = mr.ci$fixed[1,"ci.ub"]
+    meta.mult.coefs[nrow(meta.mult.coefs),"z"] = mr.qe$zval
+    meta.mult.coefs[nrow(meta.mult.coefs),"P"] = mr.qe$pval
+    meta.mult.coefs[nrow(meta.mult.coefs),"tau2"] = mr.qe$tau2
+    meta.mult.coefs[nrow(meta.mult.coefs),"I2"] = mr.qe$I2
+    meta.mult.coefs[nrow(meta.mult.coefs),"H2"] = mr.qe$H2
+    meta.mult.coefs[nrow(meta.mult.coefs),"N"] = nrow(emt.qe)
+    
+  }
+}
+
 # no moderators
 meta.mult = data.frame(qvar = "", focal.evar = "", estimate = 0, SE = 0, CI.low = 0, CI.up = 0, z = 0, P = 0, tau2 = 0, I2 = 0, H2 = 0, N = 0)
 for(v in marginal.vars){
