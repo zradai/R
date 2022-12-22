@@ -5,6 +5,7 @@
 
 # Takes kraken2 report files and extracts species-level (or other, user-specified) taxa, into sample-by-taxa community matrix, 
 # where the values are the raw (or standardized: only TMM for now) read counts.
+# Report file import and taxon-extraction is parallelized.
 
 # SEE REQUIRED PACKAGES BELOW ('list.of.packages')
 
