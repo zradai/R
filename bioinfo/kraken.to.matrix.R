@@ -54,10 +54,7 @@ kraken.to.matrix = function(dir=getwd(), min.percentage=0, min.cladereads=0, fil
     "parallel",
     "foreach",
     "doParallel",
-    "ranger",
-    "palmerpenguins",
     "tidyverse",
-    "kableExtra",
     "pavian",
     "edgeR"
   )
